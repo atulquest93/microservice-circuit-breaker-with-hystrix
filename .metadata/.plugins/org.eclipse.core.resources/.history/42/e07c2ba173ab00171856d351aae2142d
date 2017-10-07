@@ -1,0 +1,10 @@
+package com.microservice.dto;
+
+public class Certification {
+
+	private String cert_id;
+	private String cert_name;
+	private String cert_courses;
+	
+	
+}

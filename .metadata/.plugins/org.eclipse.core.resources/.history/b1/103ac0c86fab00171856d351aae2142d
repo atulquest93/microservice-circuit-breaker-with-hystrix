@@ -1,0 +1,6 @@
+spring.application.name=EurekaServer
+server.port=8081
+eureka.instance.hostname=localhost
+# 0 for development machines ! For production use 3 mins
+eureka.numberRegistrySyncRetries=0
+

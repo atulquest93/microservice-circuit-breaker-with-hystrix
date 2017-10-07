@@ -1,0 +1,6 @@
+package com.microservice.controller;
+
+@RestController
+public class CertificationController {
+
+}

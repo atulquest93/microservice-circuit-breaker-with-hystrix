@@ -1,0 +1,14 @@
+package com.microservice.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+
+class CourseController {
+	
+	@RequestMapping("test/")
+	public String hello() {
+		return "HELLO !OK ";
+	}
+}

@@ -1,0 +1,14 @@
+package com.microservice.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.microservice.dto.Certification;
+
+@RestController
+public class CertificationController {
+
+	@RequestMapping("/getCertifications")
+	public Certification getCertifications() {
+		
+	}
+}

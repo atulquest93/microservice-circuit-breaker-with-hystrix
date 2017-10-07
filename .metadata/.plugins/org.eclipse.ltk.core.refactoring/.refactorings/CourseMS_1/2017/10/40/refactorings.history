@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.microservice.dto.Course.datasoruce&apos; in &apos;com.microservice.dto.Course&apos;&#x0D;&#x0A;- Original project: &apos;CourseMS_1&apos;&#x0D;&#x0A;- Original element: &apos;com.microservice.dto.Course.datasoruce&apos;&#x0D;&#x0A;- Getter method name: &apos;getDatasoruce&apos;&#x0D;&#x0A;- Setter method name: &apos;setDatasoruce&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;datasoruce&apos;" flags="589830" getter="getDatasoruce" id="org.eclipse.jdt.ui.self.encapsulate" input="/src\/main\/java&lt;com.microservice.dto{Course.java[Course^datasoruce" insertion="6" setter="setDatasoruce" stamp="1507392836793" version="1.0" visibility="1"/>
+</session>

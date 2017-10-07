@@ -1,0 +1,6 @@
+#server port
+server.port=8902
+#application name
+spring.application.name=Certficiation_microservice_1
+#Eureka Server locations
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka/

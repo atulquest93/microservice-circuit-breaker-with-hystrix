@@ -1,0 +1,6 @@
+package com.microservice.service;
+
+@Service
+public class CertificationService {
+
+}

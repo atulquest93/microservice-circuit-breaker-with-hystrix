@@ -1,0 +1,26 @@
+package com.microservice.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.microservice.dto.Course;
+
+@RestController
+public class CourseController {
+
+	@RequestMapping("/getCourses")
+	public ArrayList<Course> greeting() {
+	    	
+	        Course java = new Course("1001", "Java", "Videos");
+	        Course javascript = new Course("1002", "Javascript", "EBook");
+	        
+	        ArrayList<Course> list = new ArrayList<Course>();
+	        list.add(javascript);
+	        list.add(java);
+	        
+	        return list;
+	        
+	    }
+}

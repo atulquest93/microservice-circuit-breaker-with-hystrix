@@ -1,0 +1,12 @@
+package com.microservice.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+
+class CourseController {
+	
+	public String hello() {
+		return "HELLO !OK ";
+	}
+}

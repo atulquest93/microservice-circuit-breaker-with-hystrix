@@ -1,0 +1,4 @@
+#server port
+server.port=8902
+#application name
+spring.application.name=Certficiation_microservice_1

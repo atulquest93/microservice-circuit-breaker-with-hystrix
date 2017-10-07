@@ -1,0 +1,16 @@
+package com.microservice.service;
+
+import java.net.URI;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CertificationService {
+	
+	public String getCourseList() {
+		
+		URI uri = URI.create("http://localhost:8901/getCourses");
+		
+		return "OK";
+	}
+}

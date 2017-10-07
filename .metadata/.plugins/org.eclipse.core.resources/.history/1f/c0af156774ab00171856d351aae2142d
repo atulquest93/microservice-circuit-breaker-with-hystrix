@@ -1,0 +1,32 @@
+package com.microservice.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.microservice.dto.Certification;
+
+@RestController
+public class CertificationController {
+
+	@RequestMapping("/getCertifications")
+	public List<Certification> getCertifications() {
+		Certification aws_cloud_ass = new Certification("1001", "AWS Cloud Associate", "Aws Cloud Essentials");
+		Certification aws_cloud_devops_ass = new Certification("1003", "Aws cloud Devops associate", "Aws CLoud Essentials");
+		Certification aws_cloud_arch = new Certification("1002", "Aws Cloud Archtitect", "Aws Cloud Associate + Devops");
+		
+		List<Certification> certs = new ArrayList<Certification>();
+		certs.add(aws_cloud_ass);
+		certs.add(aws_cloud_devops_ass);
+		certs.add(aws_cloud_arch);
+		
+		return certs;
+	}
+	
+	@RequestMapping("/info")
+	public String getInfo() {
+		return "Volla ! This is course microservice-1 saying hello ! <br> <a href='./getCourses'>Check Endpoint response</a>";
+	}
+}

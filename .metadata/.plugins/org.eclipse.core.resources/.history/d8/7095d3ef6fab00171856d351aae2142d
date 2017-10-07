@@ -1,0 +1,13 @@
+spring.application.name=EurekaServer
+# Port Number
+server.port=8081
+# instance name
+eureka.instance.hostname=localhost
+# 0 for development machines ! For production use 3 mins
+eureka.numberRegistrySyncRetries=0
+# path for Eureka management pannel
+eureka.client.service-url.default-zone=http://${eureka.instance.hostname}:${server.port}/eureka/
+# stop eureka server to make server clusters
+eureka.client.register-with-eureka=false
+
+
