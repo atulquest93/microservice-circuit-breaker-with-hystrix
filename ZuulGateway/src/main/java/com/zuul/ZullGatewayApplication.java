@@ -1,0 +1,22 @@
+package com.zuul;
+
+import org.springframework.boot.SpringApplication;
+import com.zuul.filter.SimpleFilter;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.context.annotation.Bean;
+
+@EnableZuulProxy
+@SpringBootApplication
+public class ZullGatewayApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ZullGatewayApplication.class, args);
+	}
+	
+	@Bean
+	public SimpleFilter SimpleFilter() {
+		return new SimpleFilter();
+	}
+	
+}
