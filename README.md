@@ -17,4 +17,6 @@ Spring tool suite project contains:
  #Hystrix
  - To be Updated
  
+ #Zuul Request Routing & Request filter
+ - To be Updated 
  
