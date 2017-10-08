@@ -1,0 +1,10 @@
+#zuul.routes.Certficiation_microservice_1.url=http://localhost:8902
+#zuul.routes.course-microservice-1.url=http://localhost:8901
+#zuul.routes.Certficiation_microservice_1.path= /certifications/**
+#zuul.routes.Certficiation_microservice_1.serviceId = Certficiation_microservice_1
+ribbon.eureka.enabled=true
+endpoints.routes.sensitive: false
+server.port=8080
+
+
+eureka.client.serviceUrl.defaultZone: http://localhost:8900/eureka/

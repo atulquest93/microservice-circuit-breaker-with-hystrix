@@ -1,9 +1,11 @@
-# Circuit Breaker Pattern for microservices
+# Cloud Native Example Project with Eureka , Microservices, Zuul, Ribbon & Hystrix
 
 Spring tool suite project contains: 
  - Eureka Server 
  - 2 Microservices that can auto register to Eureka Server 
  - Hystrix fallback method implementation 
+ - Zuul Reverse Proxy / Request Filter & load Balancer
+ - Ribbon Client side load balance and easy microservice mapping 
  
  # Run
  `mvnw spring-boot:run`
