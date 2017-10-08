@@ -1,0 +1,48 @@
+package com.microservice.service;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URLDecoder;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+
+@Service
+public class CertificationService {
+	
+	/*
+	 * Create AutoWired Bean using @Bean, don't use new RestTemplate();
+	 * Using for POC only to avoid circular dependency. 
+	 */
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	/*
+	 * Method using hystrix fallback method and timeout value to fallback.
+	 */
+	@HystrixCommand(fallbackMethod="getCachedCourses",  commandProperties= {
+			@HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value = "1000")
+	})
+	public String getCourseList() {
+		
+		URI uri = URI.create("http://localhost:8901/getCourses");
+		
+		return this.restTemplate.getForObject(uri, String.class);
+	}
+	
+	public String getCachedCourses() {
+		/*
+		 * Encoded Stream of cached data 
+		 */
+		String cache = "%5B%7B%22id%22%3A%221002%22%2C%22name%22%3A%22Javascript%22%2C%22category%22%3A%22Course%22%2C%22datasoruce%22%3A%22Course%20Microservice%20Cache%22%7D%2C%7B%22id%22%3A%221001%22%2C%22name%22%3A%22Java%22%2C%22category%22%3A%22Videos%22%2C%22datasoruce%22%3A%22Course%20Microservice%20Cache%22%7D%5D";
+		
+	    try {
+			return URLDecoder.decode(cache.replace("+", "%2B"), "UTF-8").replace("%2B", "+");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			return "Exception";
+		}
+	  }
+}

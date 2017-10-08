@@ -1,0 +1,8 @@
+package com.zuul.filter;
+
+public class SimpleFilter {
+	/*
+	 * Zuul Provides 4 filters : Pre, Route, Post, Error
+	 * Implemeting Pre filter for this POC. 
+	 */
+}

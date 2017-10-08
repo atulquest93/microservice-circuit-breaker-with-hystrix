@@ -1,0 +1,34 @@
+package com.zuul.filter;
+
+import com.netflix.zuul.ZuulFilter;
+
+public class SimpleFilter extends ZuulFilter{
+	
+	/*
+	 * Zuul Provides 4 filters : Pre, Route, Post, Error
+	 * Implemeting Pre filter for this POC. 
+	 */
+	
+	@Override
+	public Object run() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean shouldFilter() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int filterOrder() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String filterType() {
+		return "pre";
+	}
+}
