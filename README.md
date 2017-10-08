@@ -19,8 +19,7 @@ Spring tool suite project contains:
  
  #Zuul Request Routing & Request filter
  - To be Updated 
-<<<<<<< HEAD
  
-=======
->>>>>>> 5c1f54941d62400d16a3247636a736164194ae84
+ #Ribbon 
+ - To be updated
  
