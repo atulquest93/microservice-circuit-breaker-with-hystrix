@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLDecoder;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -16,7 +17,8 @@ public class CertificationService {
 	 * Create AutoWired Bean using @Bean, don't use new RestTemplate();
 	 * Using for POC only to avoid circular dependency. 
 	 */
-	RestTemplate restTemplate = new RestTemplate();
+	@Autowired
+	private RestTemplate restTemplate;
 	
 	/*
 	 * Method using hystrix fallback method and timeout value to fallback.
@@ -26,7 +28,7 @@ public class CertificationService {
 	})
 	public String getCourseList() {
 		
-		URI uri = URI.create("http://localhost:8901/getCourses");
+		URI uri = URI.create("http://course-microservice-1/getCourses");
 		
 		return this.restTemplate.getForObject(uri, String.class);
 	}
